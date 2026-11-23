@@ -1,3 +1,4 @@
-a.
-b.
-c.
+a. An adversarial sequence of points would be some sequence such that when a new subdivision is made, all but one of the points is contained in the same new quadrent. This would repeat for all points until each one is contained within it's own subdivision.
+    (0.75, 0.75), (0.375, 0.375), (0.1875, 0.1875)... (each one is three quarters of the way to the bottom right corner of their respective quadrant)
+b. This is a problem because the tree will keep getting deeper, but all points will be in the same location and therefore in the same quadrant. To solve this you could set a maximum depth where more than the max number of points can be in a single quadrant after it is reached.
+c. Quad trees would mostly be useful for scenes with mostly static objects. Moving many objects at once means having to update all of those objects in the quad tree because it is possible they crossed into another quadrant. This may become very expensive if many objects are moving.
